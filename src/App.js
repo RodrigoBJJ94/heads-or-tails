@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, StatusBar } from 'react-native';
 import ModalStart from './components/ModalStart';
 
 export default function App() {
@@ -53,14 +53,14 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor="#000" />
       <ModalStart />
-      <Text style={styles.title}>Cara ou Coroa</Text>
+      <Text style={styles.title}>Heads or Tails</Text>
       <Image source={coinCurrent} />
       <TouchableOpacity
         style={styles.button}
-        title='gi4534534rar'
         onPress={() => { turnCoin() }}
-      ><Text style={styles.buttonText}>Girar</Text>
+      ><Text style={styles.buttonText}>SPIN</Text>
       </TouchableOpacity>
     </View>
   );
@@ -70,29 +70,30 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: 'rgb(255, 255, 255)'
+    justifyContent: 'center',
+    backgroundColor: '#000',
   },
   title: {
     justifyContent: 'center',
     alignItems: 'center',
-    fontSize: 40,
-    marginTop: 25,
-    marginBottom: 20,
+    fontSize: 46,
+    fontFamily: 'Montserrat-ExtraBold',
+    marginBottom: 60,
     color: 'rgb(235, 192, 20)',
   },
   button: {
     width: '95%',
-    height: 50,
+    height: 60,
     backgroundColor: 'rgb(235, 192, 20)',
-    marginTop: 40,
+    marginTop: 80,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 4,
+    borderRadius: 2,
   },
   buttonText: {
-    fontSize: 26,
-    color: 'white',
-    textTransform: 'uppercase'
+    fontSize: 30,
+    fontFamily: 'Montserrat-ExtraBold',
+    color: '#000'
   }
 });
 
